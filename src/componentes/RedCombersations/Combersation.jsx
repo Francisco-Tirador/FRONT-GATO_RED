@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { ComberID } from '../../store/slice/ComberID.slice'
 import tokenConfig from '../../util/tokenConfig'
 
-const Combersation = ({id,tittle,combersationId}) => {
+const Combersation = ({id,tittle,combersationId,action}) => {
 const navigate=useNavigate()
 const dispach=useDispatch()
 
@@ -17,8 +17,9 @@ const goToCombersation=()=>{
 const deleteCombersation=()=>{
   const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Red/My/${combersationId}`
   axios.delete(URL,tokenConfig())
-  .then(res=>console.log(res))
+  .then(res=>action())
   .catch(res=>console.log(res))
+  
 }
   return (
     <div>

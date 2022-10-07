@@ -18,7 +18,7 @@ const getREDcombersations=()=>{
 console.log(Combersations?.Red[0]?.id)
 useEffect(() => {
  getREDcombersations()
-}, [Combersations])
+}, [])
 
 
   return (
@@ -28,6 +28,7 @@ useEffect(() => {
         Combersations?.Red?.map(Comber=>(
           <Combersation
           id={Comber.id}
+          action={getREDcombersations}
           combersationId={Comber?.combersationId}
           tittle={Comber?.combersation?.tittle}
           key={Comber.id}

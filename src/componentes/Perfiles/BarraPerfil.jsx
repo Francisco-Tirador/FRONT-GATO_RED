@@ -22,7 +22,6 @@ const newRed2=(masPotente)=>{
     axios.post(URL2,data,tokenConfig())
     .then(res=>{
         console.log(res?.data)
-        navigate('/RED')
     })
     .catch(res=>console.log(res))
 }
@@ -48,9 +47,7 @@ const newCombersation=()=>{
     const URL="https://api-gato-red.onrender.com/api-gato-red/v1/Comber"
     axios.post(URL,data,tokenConfig())
     .then(res=>{
-     
-        setidComber(res?.data?.response?.id),
-        console.log(res?.data?.response?.id),
+        navigate('/RED')
         newRed(res?.data?.response?.id)
     })
     .catch(res=>console.log(res))
