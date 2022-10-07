@@ -1,10 +1,11 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 import tokenConfig from '../../util/tokenConfig'
 
 const CreatePost = () => {
-
+const navigate=useNavigate()
 const {handleSubmit,reset,register}=useForm()
 
 const submit=(data)=>{
@@ -12,11 +13,16 @@ const submit=(data)=>{
     const URL="https://api-gato-red.onrender.com/api-gato-red/v1/poust"
     axios.post(URL,data,tokenConfig())
     .then(res=>{console.log(res),
-    console.log(data)
+        navigate('/')
+        
     })
     .catch(res=>console.log(res))
 }
 
+
+const toReturn=()=>{
+    navigate('/')
+}
   return (
     <div >CreatePost
         <form onSubmit={handleSubmit(submit)}>
@@ -29,13 +35,14 @@ const submit=(data)=>{
                     <input type='text' id='resgister-content' {...register('content')}></input>
 
                 </li>
-                {/* <li><label htmlFor='register-URL'>URL de imagen(opcional)</label>
+                <li><label htmlFor='register-URL'>URL de imagen(opcional)</label>
                     <input type='text'id='register-URL' {...register('img')}></input>
                     
-                </li> */}
+                </li>
             </ul>
             <button>Nuevo Post</button>
         </form>
+        <button onClick={toReturn}>REGRESEMOS</button>
     </div>
   )
 }

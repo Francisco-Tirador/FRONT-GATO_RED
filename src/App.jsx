@@ -8,6 +8,8 @@ import Home from './componentes/Home'
 import Welcome from './componentes/singUp/Welcome'
 import CreatePost from './componentes/Post/CreatePost'
 import EditPost from './componentes/Post/EditPost'
+import RED from './componentes/RedCombersations/RED'
+import Usuarios from './componentes/Perfiles/Usuarios'
 
 function App() {
 
@@ -18,9 +20,13 @@ const getToken=localStorage.getItem('token')
         getToken?
       <ul>
         <li><Link to="/">Login</Link></li>
+        <li><Link to="/CreatePost">Crear Post</Link></li>
+        <li><Link to="/RED">Combersaciones</Link></li>
+        <li><Link to="/Perfiles">Agregar Amigo</Link></li>
       </ul>
       :''
 }
+
     <Routes >
     <Route path='/' element={<Welcome/>}/>
     <Route path='/Register' element={<Register/>}/>
@@ -28,6 +34,8 @@ const getToken=localStorage.getItem('token')
     <Route path='/Home' element={<Home/>}/>
     <Route path='/CreatePost' element={<CreatePost/>}/>
     <Route path='/EditMyPost' element={<EditPost/>}/>
+    <Route path='/RED' element={<RED/>}/>
+    <Route path='/Perfiles' element={<Usuarios/>}/>
     </Routes>
    
     </div>

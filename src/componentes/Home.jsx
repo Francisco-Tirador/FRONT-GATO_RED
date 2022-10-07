@@ -34,7 +34,7 @@ axios.get(URL)
 
 useEffect(() => {
 ALlPost()
-},[Poust])
+},[])
 
 console.log(Poust,'ds')
 

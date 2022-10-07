@@ -1,22 +1,30 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
 import tokenConfig from '../../util/tokenConfig'
 
-const EditPost = ({id}) => {
-
+const EditPost = () => {
+const idPost=useSelector(res=>res.idUser)
 const {handleSubmit,reset,register}=useForm()
+const navigate=useNavigate()
+
 
 const submit=(data)=>{
     console.log(data)
-    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/poust/My/${id}`
+    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/poust/My/${idPost}`
     axios.put(URL,data,tokenConfig())
-    .then(res=>{console.log(res)
-   
+    .then(res=>{console.log(res),
+        navigate('/')
     })
     .catch(res=>console.log(res))
 }
 
+const toReturn=()=>{
+    navigate('/')
+}
   return (
     <div >CreatePost
         <form onSubmit={handleSubmit(submit)}>
@@ -29,13 +37,14 @@ const submit=(data)=>{
                     <input type='text' id='resgister-content' {...register('content')}></input>
 
                 </li>
-                {/* <li><label htmlFor='register-URL'>URL de imagen(opcional)</label>
+                <li><label htmlFor='register-URL'>URL de imagen(opcional)</label>
                     <input type='text'id='register-URL' {...register('img')}></input>
                     
-                </li> */}
+                </li>
             </ul>
             <button>Nuevo Post</button>
         </form>
+        <button onClick={toReturn}>REGRESEMOS</button>
     </div>
   )
 }
