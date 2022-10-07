@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px ;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  list-style: none;
+}
+
+*{
+  list-style: none;
+  background-color: rgb(28, 28, 28);
+}
+
+.Login{
+  width: max-content;
+  box-shadow:0 0 20px rgb(255, 255, 255);;
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  text-align: left;
+  display: flex;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+
+.inicioLogin{
+  background-color: black;
+}
