@@ -40,7 +40,7 @@ useEffect(() => {
         console.log(idComber)
         ToReturn()
     }
-    }, [])
+    }, [Messages])
     console.log(Messages)
 
 const submit=(data)=>{

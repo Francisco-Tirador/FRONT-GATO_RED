@@ -18,7 +18,7 @@ const getREDcombersations=()=>{
 console.log(Combersations?.Red[0]?.id)
 useEffect(() => {
  getREDcombersations()
-}, [])
+}, [Combersations])
 
 
   return (
