@@ -34,7 +34,7 @@ axios.get(URL)
 
 useEffect(() => {
 ALlPost()
-},[Recarga])
+},[Poust])
 
 console.log(Poust,'ds')
 
