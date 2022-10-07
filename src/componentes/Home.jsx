@@ -42,7 +42,7 @@ console.log(Poust,'ds')
     <div>Home
       <button onClick={createPost}>Crear Post</button>
       {
-        Poust?.Poust?
+        Poust?.Poust[0]?
         Poust?.Poust?.map(Post=>(
           <TargetPost
           action={setRecarga}

@@ -10,6 +10,8 @@ import CreatePost from './componentes/Post/CreatePost'
 import EditPost from './componentes/Post/EditPost'
 import RED from './componentes/RedCombersations/RED'
 import Usuarios from './componentes/Perfiles/Usuarios'
+import Combersation from './componentes/RedCombersations/Combersation'
+import Messages from './componentes/RedCombersations/Messages'
 
 function App() {
 
@@ -26,7 +28,7 @@ const getToken=localStorage.getItem('token')
       </ul>
       :''
 }
-
+{/* <Combersation/> */}
     <Routes >
     <Route path='/' element={<Welcome/>}/>
     <Route path='/Register' element={<Register/>}/>
@@ -36,6 +38,8 @@ const getToken=localStorage.getItem('token')
     <Route path='/EditMyPost' element={<EditPost/>}/>
     <Route path='/RED' element={<RED/>}/>
     <Route path='/Perfiles' element={<Usuarios/>}/>
+    <Route path='/Combersation' element={<Combersation/>}/>
+    <Route path='/Messages' element={<Messages/>}/>
     </Routes>
    
     </div>

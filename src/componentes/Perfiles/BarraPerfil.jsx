@@ -1,36 +1,44 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import tokenConfig from '../../util/tokenConfig'
 
 const BarraPerfil = ({id}) => {
+
+const navigate=useNavigate()
+
 const [User, setUser] = useState()
 const [idComber, setidComber] = useState()
 const Myid=localStorage.getItem('IdUser')
 //? //////////////
-const newRed2=()=>{
+const newRed2=(masPotente)=>{
+   
     const data={
         userId:Myid,
-       combersationId:idComber
+       combersationId:masPotente
     }
+    console.log(data)
     const URL2="https://api-gato-red.onrender.com/api-gato-red/v1/Red"
     axios.post(URL2,data,tokenConfig())
     .then(res=>{
         console.log(res?.data)
+        navigate('/RED')
     })
     .catch(res=>console.log(res))
 }
 //? //////////////
-const newRed=()=>{
+const newRed=(masRapido)=>{
     const data={
         userId:id,
-       combersationId:idComber
+       combersationId:masRapido
     }
 
     console.log(data)
     const URL2="https://api-gato-red.onrender.com/api-gato-red/v1/Red"
     axios.post(URL2,data,tokenConfig())
     .then(res=>{
-        newRed2()
+        console.log(res.data)
+        newRed2(res?.data?.response?.combersationId)
     })
     .catch(res=>console.log(res))
 }
@@ -43,10 +51,15 @@ const newCombersation=()=>{
      
         setidComber(res?.data?.response?.id),
         console.log(res?.data?.response?.id),
-        newRed()
+        newRed(res?.data?.response?.id)
     })
     .catch(res=>console.log(res))
 }
+
+// const verificarComber=()=>{
+//     const URL=
+// }
+
 
 const getUser=()=>{
     
