@@ -6,7 +6,7 @@ import Combersation from './Combersation'
 const RED = () => {
 
 const [Combersations, setCombersations] = useState()
-
+//? //////////////
 const getREDcombersations=()=>{
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Red/My`
     axios.get(URL,tokenConfig())
@@ -15,16 +15,17 @@ const getREDcombersations=()=>{
     })
     .catch(res=>{console.log(res)})
 }
-console.log(Combersations?.Red[0]?.id)
+// console.log(Combersations?.Red[0]?.id)
 useEffect(() => {
  getREDcombersations()
 }, [])
 
 
+
   return (
     <div>
       {
-        Combersations?.Red[0]?
+        Combersations?
         Combersations?.Red?.map(Comber=>(
           <Combersation
           id={Comber.id}
