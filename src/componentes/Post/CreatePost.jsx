@@ -36,7 +36,7 @@ const toReturn=()=>{
 
                 </li>
                 <li><label htmlFor='register-URL'>URL de imagen(opcional)</label>
-                    <input type='url'id='register-URL' {...register('img')}></input>
+                    <input type='text'id='register-URL' {...register('img')}></input>
                     
                 </li>
             </ul>
