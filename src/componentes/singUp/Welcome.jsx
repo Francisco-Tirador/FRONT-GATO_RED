@@ -14,7 +14,7 @@ else{setToken(true)}
 }, [tok])
 
   return (
-    <div>
+    <div className='welcome'>
         {
             Token?<Home/>:<Inicio/>
         }

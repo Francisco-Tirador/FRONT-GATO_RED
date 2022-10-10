@@ -2,19 +2,19 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { ComberID } from '../../store/slice/ComberID.slice'
+import { ConverID } from '../../store/slice/ConverID.slice'
 import tokenConfig from '../../util/tokenConfig'
 
-const Combersation = ({id,tittle,combersationId,action}) => {
+const Conversation = ({id,tittle,combersationId,action}) => {
 const navigate=useNavigate()
 const dispach=useDispatch()
 
-const goToCombersation=()=>{
-    dispach(ComberID(combersationId))
+const goToConversation=()=>{
+    dispach(ConverID(combersationId))
     navigate('/Messages')
 }
 
-const deleteCombersation=()=>{
+const deleteConversation=()=>{
   const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Red/My/${combersationId}`
   axios.delete(URL,tokenConfig())
   .then(res=>action())
@@ -22,14 +22,14 @@ const deleteCombersation=()=>{
   
 }
   return (
-    <div>
+    <div className='conversations'>
         <h2>{tittle}</h2>
-        <div>
-            <button onClick={goToCombersation}>GO to Messages</button>
-            <button onClick={deleteCombersation}>Borrar combersacion</button>
+        <div className=''>
+            <button onClick={goToConversation}>GO to Messages</button>
+            <button onClick={deleteConversation}>Borrar combersacion</button>
         </div>
     </div>
   )
 }
 
-export default Combersation
+export default Conversation

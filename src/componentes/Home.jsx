@@ -26,7 +26,7 @@ const ALlPost=()=>{
 axios.get(URL)
 .then(async res=>{
   setPoust(res.data)
-  console.log(res.data)})
+ })
 .catch(res=>console.log(res))
 }
 
@@ -36,11 +36,13 @@ useEffect(() => {
 ALlPost()
 },[])
 
-console.log(Poust,'ds')
+
 
   return (
-    <div>Home
+    <div className=''>
       <button onClick={createPost}>Crear Post</button>
+
+      <div className='contenidoInicio'>
       {
         Poust?.Poust[0]?
         Poust?.Poust?.map(Post=>(
@@ -53,9 +55,7 @@ console.log(Poust,'ds')
         :
         <div>Aun no hay ningin Post</div>
       }
-       
-      
-      
+      </div>
     </div>
   )
 }

@@ -38,7 +38,7 @@ const submit= data=>{
 }
 
 return (
-    <div className='Login'>
+    <div className='inicioLogin'>
       <div>
       <h1>Hola Brou CAT</h1>
       <form onSubmit={handleSubmit(submit)}>

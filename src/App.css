@@ -1,19 +1,47 @@
-#root {
+/* #root {
   max-width: 1280px ;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   list-style: none;
-}
+} */
 
-*{
+* {
   list-style: none;
-  background-color: rgb(28, 28, 28);
 }
 
-.Login{
+
+body {
+ 
+  background-image: linear-gradient(to right, rgb(113, 12, 121), rgb(8, 55, 150));
+ 
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.App{
+  min-width:100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titulo {
+  background-color: rgb(0, 1, 2);
+
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.Login {
   width: max-content;
-  box-shadow:0 0 20px rgb(255, 255, 255);;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  ;
   padding: 20px;
   border-radius: 20px;
   justify-content: center;
@@ -24,6 +52,99 @@
 }
 
 
-.inicioLogin{
+.inicioLogin {
   background-color: black;
+}
+
+
+/* Formato de los post en su contenedor/////////////////////// */
+.contenidoInicio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.targetPost {
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  width: 60%;
+  background-color: rgb(45, 45, 45);
+  text-align: center;
+  color: wait;
+}
+
+.imgPost {
+  width: 80%;
+  height: 350px;
+}
+
+.targetPost button img {
+  width: 20px;
+}
+
+.textPost {
+
+  margin-left: 50px;
+  text-align: start;
+  width: 80%;
+
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* valores de crear y editar post////////////////////////////////////////////////// */
+.editedPost {
+  text-align: end;
+  background-color: rgb(31, 26, 26);
+  padding: 50px;
+  margin: 20PX;
+  border-radius: 0 0 100px;
+}
+
+.Postbutton {
+  text-align: start;
+}
+
+.Postbutton img {
+  width: 25px;
+}
+
+.editedPost li {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.editedImput {
+  width: 450px;
+  height: 30px;
+}
+
+
+/* RED//////////////////////////////////////////////////// */
+.RED{
+width: 100%;
+  
+}
+.conversations{
+ background-color: rgb(216, 99, 227);
+  width: 80%;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.conversations div{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.conversations img{
+  width: 30px;
 }

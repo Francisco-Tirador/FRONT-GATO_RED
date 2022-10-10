@@ -20,7 +20,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div>Usuarios
+    <div className='RED'>Usuarios
         {
             Usuarios?.map(User=>(
                 <BarraPerfil

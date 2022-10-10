@@ -96,9 +96,9 @@ useEffect(() => {
 
 
   return Render?(
-    <div>
+    <div className='conversations'>
         
-        <h2>{User?.name}</h2>
+        <h2>{User?.name} <img src='https://cdn-icons-png.flaticon.com/512/4543/4543765.png'/></h2>
         <div>
             <button onClick={newCombersation}>Enviar mensaje</button>
         </div>

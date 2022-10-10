@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit'
 import idUser from './slice/idUser.slice'
-import ComberID from './slice/ComberID.slice'
+import ConverID from './slice/ConverID.slice'
+import IdPost from './slice/editedPost.slice'
 
 export default configureStore({
     reducer: {
         idUser,
-        ComberID
+        ConverID,
+        IdPost
     }          //*reducer son las accion como los estados
 })
 

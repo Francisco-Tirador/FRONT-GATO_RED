@@ -18,6 +18,7 @@ const submit=(data)=>{
     axios.post(URL,data)
     .then(res=>{
         console.log(res.data)
+        navigate('/Inicio')
     })
     .catch(err=>{
         console.log(err.response.data.message)

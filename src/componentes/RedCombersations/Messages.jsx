@@ -13,15 +13,15 @@ const [Messages, setMessages] = useState()
 const [URL, setURL] = useState(false)
 
 
-const idComber=useSelector(res=>res.ComberID)
+const idConver=useSelector(res=>res.ConverID)
 
-
+console.log(idConver)
 const getMessages=()=>{
     
     console.log('hola')
-    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Comber/${idComber}`
+    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Comber/${idConver}`
     axios.get(URL,tokenConfig())
-    .then(res=>{
+    .then(res=>{console.log(res.data.response)
         setMessages(res?.data?.response[0])
         })
     .catch(res=>console.log(res.data))
@@ -33,18 +33,18 @@ const ToReturn=()=>{
 
 
 useEffect(() => {
-    if(idComber){
-       console.log(idComber)
+    if(idConver){
+       console.log(idConver)
     getMessages()
     }else{
-        console.log(idComber)
+        console.log(idConver)
         ToReturn()
     }
     }, [Messages])
     console.log(Messages)
 
 const submit=(data)=>{
-    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Message/${idComber}`
+    const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Message/${idConver}`
     axios.post(URL,data,tokenConfig())
     .then(res=>console.log(res.data))
     .catch(res=>console.log(res))
