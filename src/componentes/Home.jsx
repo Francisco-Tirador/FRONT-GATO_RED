@@ -14,12 +14,6 @@ console.log(EstadoGlobal)
 
 const [Recarga, setRecarga] = useState()
 const [Poust, setPoust] = useState()
-const navigate=useNavigate()
-
-const createPost=()=>{
-  navigate('/CreatePost')
-}
-
 
 const ALlPost=()=>{
   const URL="https://api-gato-red.onrender.com/api-gato-red/v1/poust"
@@ -30,8 +24,6 @@ axios.get(URL)
 .catch(res=>console.log(res))
 }
 
-
-
 useEffect(() => {
 ALlPost()
 },[])
@@ -39,8 +31,7 @@ ALlPost()
 
 
   return (
-    <div className=''>
-      <button onClick={createPost}>Crear Post</button>
+    <div >
 
       <div className='contenidoInicio'>
       {
@@ -53,7 +44,7 @@ ALlPost()
           />
         ))
         :
-        <div>Aun no hay ningin Post</div>
+        <div className='contenidoInicio'><h2>NO HAY POST AUN </h2></div>
       }
       
       </div>

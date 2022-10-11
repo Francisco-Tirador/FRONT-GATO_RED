@@ -25,8 +25,8 @@ const deleteConversation=()=>{
     <div className='conversations'>
         <h2>{tittle}</h2>
         <div >
-            <button onClick={goToConversation}>GO to Messages</button>
-            <button onClick={deleteConversation}>Borrar combersacion</button>
+            <button onClick={goToConversation}>Ver Mensajes</button>
+            <button onClick={deleteConversation}>Borrar conversacion</button>
         </div>
     </div>
   )

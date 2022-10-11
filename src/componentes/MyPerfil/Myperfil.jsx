@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { color1,color2 } from '../../util/Color1'
 import tokenConfig from '../../util/tokenConfig'
 import TargetPost from '../Post/TargetPost'
+import EditedPerfil from './EditedPerfil'
 const Myperfil = () => {
 
 const [User, setUser] = useState()
@@ -38,17 +39,24 @@ const deletedPerfil=()=>{
 }
 
   return (
-    <div style={color1(User?.color2)}>
-        <div className='BarraUsuario'style={color1(User?.color1)} >
-            <div style={color1(User?.color2)} className='Iconperfil'>Icon</div>
-            <div style={color1(User?.color1)}>{User?.name}</div>
-            <h2>Total de Publicaciones {User?.Pousts.length}</h2>
-            <div style={color1(User?.color2)}>
-            <button style={color1(User?.color1)} onClick={edited}>Editar perfil</button>
-            <button style={color1(User?.color1)} onClick={deletedPerfil} >Eliminar perfil</button>
-            </div>
+    <div  className='contenidoInicio' >
+        <div className='contenidoInicio' style={color1()} >
+            <div style={color1(User?.color1)} className='MyperfilConten'>
+                <img className='iconPerfil' src="https://cdn-icons-png.flaticon.com/512/2330/2330063.png" />
+                <div className='nameUser' style={color1()}><h1>{User?.name}</h1>
+                <h2>Total de Publicaciones {User?.Pousts.length}</h2>
+                </div>
+               
+                </div>
+                <div className='config'>
+                     <button onClick={edited}> <img className='icono' src="https://cdn-icons-png.flaticon.com/512/3730/3730451.png" alt="" /> Editar mi perfil</button>
+                     <button onClick={edited}> <img className='icono' src='https://cdn-icons-png.flaticon.com/512/3807/3807871.png' alt="" /> Eliminar mi perfil</button>
+                </div>
+                
         </div>
-        <div style={color1(User?.color2)}>
+                
+        
+        <div className='contenidoInicio' style={color1()}>
             {
                 User?.Pousts?
                     User?.Pousts?.map(Post=>(
@@ -58,7 +66,6 @@ const deletedPerfil=()=>{
                         />
                     )):
                     <div>No hay Post</div>
-                    
             }
         </div>
 

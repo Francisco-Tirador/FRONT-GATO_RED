@@ -27,11 +27,13 @@ const CloseSession=()=>{
 
 //TODO-- Con navLikn podemos dar estilo a la ruta de donde estamos , recibe espesificamente isActive lo llamamos en un callback
   return (
+    <div >
     <div className="App">
       <div className='head'>
         <h1>GATO RED <img src="https://cdn-icons-png.flaticon.com/512/6855/6855215.png" alt="" /></h1>
       </div>
 
+      
       {
         
         getToken?
@@ -42,6 +44,7 @@ const CloseSession=()=>{
         <li><Link to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </Link></li>
         <li><Link to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </Link></li>
         <li><Link to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </Link></li>
+        
         <li><button onClick={CloseSession}>Salir</button></li>
         
       </ul>
@@ -73,9 +76,11 @@ const CloseSession=()=>{
 //*como tipo id params si te interesa ve la clase xD yo no quise poner mucha atencio, pero tal vez te interese en el futuro xD 
 */}
 
-
-
-<Footer/>
+    </div>
+    <div className='contenFooter'>
+    <Footer/>
+    </div>
+    
     </div>
   )
 }

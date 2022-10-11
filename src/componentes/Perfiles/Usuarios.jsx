@@ -9,7 +9,7 @@ const Usuarios = () => {
 const getAllPoust=()=>{
     const URL="https://api-gato-red.onrender.com/api-gato-red/v1/users"
     axios.get(URL)
-    .then(res=>{setUsuarios(res?.data?.users)})
+    .then(res=>{setUsuarios(res?.data)})
     .catch(res=>{console.log(res?.data?.users)})
 }
 
@@ -20,14 +20,16 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className='RED'>Usuarios
+    <div className='RED'>
         {
-            Usuarios?.map(User=>(
+          Usuarios?.users[0]?
+            Usuarios?.users?.map(User=>(
                 <BarraPerfil
-                id={User.id}
-                key={User.id}
+                id={User?.id}
+                key={User?.id}
                 />
-            ))
+            )):
+            <div className='contenidoInicio'><h2>NO HAY MAS USUARIOS </h2></div>
         }
 
     </div>

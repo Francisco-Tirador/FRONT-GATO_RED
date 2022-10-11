@@ -1,13 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { color2 } from '../../util/Color1'
 import tokenConfig from '../../util/tokenConfig'
 
 const ModelMessage = ({IdUser,id,content,img}) => {
-const [NameUser, setNameUser] = useState()
+const [User, setUser] = useState()
 const getUser=()=>{
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/users/ad/${IdUser}`
     axios.get(URL,tokenConfig())
-    .then(res=>setNameUser(res.data.user.name))
+    .then(res=>setUser(res.data.user))
 }
 useEffect(() => {
    getUser()
@@ -25,13 +26,16 @@ const deleteMessage=()=>{
 
 
   return (
-    <div>
-    <div>
-        <h3>{content}</h3>
-        <p>{NameUser}</p>
+    <div  className='Mensaje'style={color2(User?.color1)}>
+    <div className='content'>
+        <p>{User?.name}</p>
+        <h3 >{content}</h3>
+        
     </div>
-        <button onClick={deleteMessage}>Delete Message</button>
+    <div className='buttonM'>
+    <img className='icono ' onClick={deleteMessage} src="https://cdn-icons-png.flaticon.com/512/7666/7666109.png" title='Borrar mensaje' />
     </div>
+     </div>
   )
 }
 

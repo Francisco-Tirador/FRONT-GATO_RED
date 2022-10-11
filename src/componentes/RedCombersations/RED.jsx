@@ -21,11 +21,11 @@ useEffect(() => {
 }, [])
 
 
-
+console.log(Conversations?.Red[0])
   return (
     <div className='RED'>
       {
-        Conversations?
+        Conversations?.Red[0]?
         Conversations?.Red?.map(Conver=>(
           <Conversation
           id={Conver.id}
@@ -35,7 +35,7 @@ useEffect(() => {
           key={Conver.id}
           />
         )):
-        <div>No hay conversaciones</div>
+        <div className='contenidoInicio'><h2>NO HAY CONVERSACIONES AUN</h2></div>
       }
     </div>
   )

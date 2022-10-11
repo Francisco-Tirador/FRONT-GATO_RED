@@ -56,11 +56,11 @@ const newRed=(masRapido)=>{
 }
 //? //////////////
 const newCombersation=()=>{
+    navigate('/RED')
     const data={tittle:User?.name}
     const URL="https://api-gato-red.onrender.com/api-gato-red/v1/Comber"
     axios.post(URL,data,tokenConfig())
     .then(res=>{
-        navigate('/RED')
         newRed(res?.data?.response?.id)
         newValidation(res?.data?.response?.id)
     })
@@ -70,7 +70,7 @@ const newCombersation=()=>{
 const validation=()=>{
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Red/validation/${id}`
     axios.get(URL,tokenConfig())
-    .then(res=>{console.log(res.data?.response),
+    .then(res=>{
         setReder(res?.data?.response)
     })
     .catch(res=>console.log(res))
@@ -81,7 +81,6 @@ const getUser=()=>{
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/users/ad/${id}`
     axios.get(URL,tokenConfig())
     .then(res=>{
-        console.log(res.data),
         setUser(res?.data?.user)
     })
     .catch(res=>console.log(res))

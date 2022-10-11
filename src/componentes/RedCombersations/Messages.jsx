@@ -14,6 +14,7 @@ const [URL, setURL] = useState(false)
 
 
 const idConver=useSelector(res=>res.ConverID)
+const idMy=useSelector(res=>res.IdUser)
 
 console.log(idConver)
 const getMessages=()=>{
@@ -46,7 +47,11 @@ useEffect(() => {
 const submit=(data)=>{
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/Message/${idConver}`
     axios.post(URL,data,tokenConfig())
-    .then(res=>console.log(res.data))
+    .then(res=>{console.log(res.data),
+    reset({
+        content:''
+    })
+    })
     .catch(res=>console.log(res))
 }
 
@@ -62,7 +67,7 @@ const ButtonURL=()=>{
 
 
   return (
-    <div>
+    <div className='ContenMensajes'>
         <div>
             <h1>{Messages?.tittle}</h1>
         </div>
@@ -80,7 +85,9 @@ const ButtonURL=()=>{
                 )):
                 <div><h2>No hay mensajes aun C:</h2></div>
             }
-            <div>
+            
+        </div>
+        <div className='BarraMensaje'>
                 <form onSubmit={handleSubmit(submit)}>
                     <ul>
                     <li><label htmlFor='register-text'></label>
@@ -101,8 +108,6 @@ const ButtonURL=()=>{
                 </form>
                 <button onClick={ButtonURL}>Añadir imagen</button>
             </div>
-        </div>
-
     </div>
   )
 }
