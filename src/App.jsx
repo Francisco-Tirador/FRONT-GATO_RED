@@ -14,6 +14,7 @@ import Messages from './componentes/RedCombersations/Messages'
 import Myperfil from './componentes/MyPerfil/Myperfil'
 import EditedPerfil from './componentes/MyPerfil/EditedPerfil'
 import ProtectedRoutes from './componentes/ProtectedRoutes'
+import Footer from './componentes/Footer'
 
 function App() {
 const naviguete=useNavigate()
@@ -27,19 +28,29 @@ const CloseSession=()=>{
 //TODO-- Con navLikn podemos dar estilo a la ruta de donde estamos , recibe espesificamente isActive lo llamamos en un callback
   return (
     <div className="App">
+      <div className='head'>
+        <h1>GATO RED <img src="https://cdn-icons-png.flaticon.com/512/6855/6855215.png" alt="" /></h1>
+      </div>
+
       {
+        
         getToken?
+        <div className='Nav'>
       <ul>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/">Inicio</NavLink></li>
-        <li><Link to="/CreatePost">Crear Post</Link></li>
-        <li><Link to="/RED">Conversaciones</Link></li>
-        <li><Link to="/Perfiles">Agregar Amigo</Link></li>
-        <li><Link to="/Myperfil">Ver tu perfil</Link></li>
+        <li><NavLink className={({isActive})=>isActive?'active':''} to="/"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/871/871821.png"  /> PRINCIPAL</NavLink></li>
+        <li><Link to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </Link></li>
+        <li><Link to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </Link></li>
+        <li><Link to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </Link></li>
+        <li><Link to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </Link></li>
         <li><button onClick={CloseSession}>Salir</button></li>
         
       </ul>
-      :''
+      </div>
+      :null
+      
 }
+
+       
 {/* <Combersation/> */}
     <Routes >
     <Route path='/' element={<Welcome/>}/>
@@ -64,7 +75,7 @@ const CloseSession=()=>{
 
 
 
-
+<Footer/>
     </div>
   )
 }

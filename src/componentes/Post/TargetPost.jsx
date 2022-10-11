@@ -39,7 +39,7 @@ const dispach=useDispatch()
         setText(true)
       }else{setText(false)}
     }
-console.log(Post)    
+  
 
   return (
     <div className='targetPost'>

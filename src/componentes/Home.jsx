@@ -55,7 +55,9 @@ ALlPost()
         :
         <div>Aun no hay ningin Post</div>
       }
+      
       </div>
+      
     </div>
   )
 }

@@ -24,7 +24,7 @@ const deleteConversation=()=>{
   return (
     <div className='conversations'>
         <h2>{tittle}</h2>
-        <div className=''>
+        <div >
             <button onClick={goToConversation}>GO to Messages</button>
             <button onClick={deleteConversation}>Borrar combersacion</button>
         </div>
