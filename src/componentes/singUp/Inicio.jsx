@@ -38,30 +38,28 @@ const submit= data=>{
 }
 
 return (
-    <div className='inicioLogin'>
+    <div className='Login'>
+      <div className='titulo'><h1>Hola Brou CAT</h1></div>
       <div>
-      <h1>Hola Brou CAT</h1>
+      
       <form onSubmit={handleSubmit(submit)}>
-      <ul className='inicioLogin'>
-        <li><b>Email:</b>GatO@gmail.com</li>
-        <li><b>Password:</b>GatO1234</li>
-     </ul>
+      
      <ul className="login_list">
       <li className="loginItem"><label htmlFor="login-email" className="login__label">Email</label>
-      <input type="email" className="login_input" id='login-email' {...register('emeil')}/></li>
+      <input type="email" className=" editedImput " id='login-email' placeholder='ingresa tu emeil (GATO@gmail.com)' {...register('emeil')}/></li>
       
       <li className="loginItem"><label htmlFor="login-pass" className="login__label">Password</label>
-      <input type="password" className="login_input" id='login-pass' {...register("password")}/></li>
+      <input type="password" className=" editedImput" id='login-pass'placeholder='ingresa tu contraseña'{...register("password")}/></li>
      </ul>
      <div>
      {
       isErrLogin&&'Intenta de nuevo no encontramos estas credenciales'
      }
       </div>
-     <button>Entremos de nuevo</button>
+     <button><img src="https://cdn-icons-png.flaticon.com/512/7817/7817034.png" className='icono' /> Entremos de nuevo</button>
      </form>
      </div>
-    <button onClick={redireccionRegister}>Crear cuenta nueva</button>
+    <button  onClick={redireccionRegister}> <img src="https://cdn-icons-png.flaticon.com/512/7817/7817039.png" className='icono' />Crear cuenta nueva</button>
     </div>
   )
 }

@@ -45,7 +45,7 @@ const CloseSession=()=>{
         <li><Link to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </Link></li>
         <li><Link to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </Link></li>
         
-        <li><button onClick={CloseSession}>Salir</button></li>
+        <li><button onClick={CloseSession}><img className='icono' src="https://cdn-icons-png.flaticon.com/512/7817/7817037.png" />Salir</button></li>
         
       </ul>
       </div>

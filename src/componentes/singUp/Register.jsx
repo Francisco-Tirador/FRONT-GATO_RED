@@ -27,25 +27,30 @@ const submit=(data)=>{
 
 
   return (
-    <div>
+    <div className='editedPost'>
+        <div className='Postbutton'>
+            <button onClick={toReturn}> 
+            <img src='https://cdn-icons-png.flaticon.com/512/2099/2099190.png'
+            />   REGRESEMOS</button>
+            </div>  
+            <div className='titulo'><h1>Crear nuevo usuario</h1></div>
         <form className='Form_Register' onSubmit={handleSubmit(submit)}>
             <ul>
             <li className="loginItem"><label htmlFor="register-name" className="login_label">Nombre(mote)</label>
-      <input type="text" className="login_input" id='register-name' {...register('name')} required/></li>
+      <input type="text" className="editedImput" id='register-name' {...register('name')} required autoComplete='off'/></li>
 
       <li className="loginItem"><label htmlFor="register-age" className="login_label">Edad</label>
-      <input type='number'min={1}max={100} className="login_input" id='register-age' {...register('age')} required/></li>
+      <input type='number'min={16}max={100} className="" id='register-age' {...register('age')} required autoComplete='off'/></li>
       
             <li className="loginItem"><label htmlFor="register-email" className="login_label">Email</label>
-      <input type="email" className="login_input" id='register-email' {...register('emeil')} required/></li>
+      <input type="email" className="editedImput" id='register-email' {...register('emeil')} required autoComplete='off'/></li>
 
       <li className="loginItem"><label htmlFor="register-password" className="login_label">Password</label>
-      <input type="text" className="login_input" id='register-password' {...register('password')} required/></li>
+      <input type="text" className="editedImput" id='register-password' {...register('password')} required autoComplete='off'/></li>
      
             </ul>
-        <button>Comencemos</button>
+        <button><img className='icono' src="https://cdn-icons-png.flaticon.com/512/7817/7817034.png"  /> Comencemos</button>
         </form>
-        <button onClick={toReturn}>Regresar</button>
     </div>
   )
 }
