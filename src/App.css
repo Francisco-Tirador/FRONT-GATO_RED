@@ -80,6 +80,7 @@ ul {
   position: fixed;
   left: 0vh;
   top: 5vh;
+
 }
 
 .Nav li {
@@ -123,7 +124,7 @@ ul {
   border-radius: 15px;
   margin-top: 15px;
   padding: 20px;
-  width: 60%;
+  width: 700px;
   background-color: rgb(45, 45, 45);
   text-align: center;
   color: wait;
@@ -208,16 +209,19 @@ ul {
   width: 30px;
 }
 
+.contentMyPerfil{
+  text-align: center;
+  width: 900px;
+  height:400px ;
+}
+
 .MyperfilConten {
   margin-top: 0;
   display: flex;
-  width: 70%;
+  width: 100%;
   background-color: rgb(11, 41, 211);
-  justify-content: start;
   height: 350px;
-
   border-radius: 400px 400px 400px 400px;
-
 }
 
 .iconPerfil {
@@ -234,14 +238,14 @@ ul {
   font-size: large;
   padding-left:0;
 }
-.RP{
+/* .RP{
   display: flex;
  flex-wrap: nowrap;
  text-align: center;
   justify-content: center;
 background-color: aliceblue;
 height: 500px;
-}
+} */
 .config{
 margin: 20px 0px;
   width: 500px;
@@ -265,12 +269,22 @@ margin: 20px 0px;
 }
 
 .BarraMensaje{
-
-  background-color: aliceblue;
+  padding: 10px;
+  background-color: rgb(40, 40, 40);
+  width: auto;
+  text-align: center;
+}
+.BarraMensaje input{
+background-color: rgb(2, 0, 16);
+width:90%;
+height: 30px;
 }
 .buttonM{
+  
   display: flex;
   justify-content: end;
   text-align: end;
   cursor: pointer;
 }
+
+

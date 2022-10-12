@@ -40,7 +40,7 @@ const deletedPerfil=()=>{
 
   return (
     <div  className='contenidoInicio' >
-        <div className='contenidoInicio' style={color1()} >
+        <div className='contentMyPerfil' style={color1()} >
             <div style={color1(User?.color1)} className='MyperfilConten'>
                 <img className='iconPerfil' src="https://cdn-icons-png.flaticon.com/512/2330/2330063.png" />
                 <div className='nameUser' style={color1()}><h1>{User?.name}</h1>
@@ -56,17 +56,18 @@ const deletedPerfil=()=>{
         </div>
                 
         
-        <div className='contenidoInicio' style={color1()}>
+        <div className='contenidoInicio'>
             {
-                User?.Pousts?
-                    User?.Pousts?.map(Post=>(
-                        <TargetPost
-                        id={Post.id}
-                        key={Post.id}
-                        />
-                    )):
-                    <div>No hay Post</div>
-            }
+                User?.Pousts[0]?
+                User?.Pousts?.map(Post=>(
+                    <TargetPost
+                 
+                    id={Post.id}
+                    key={Post.id}
+                    />
+                  ))
+                  :null
+                  }
         </div>
 
     </div>

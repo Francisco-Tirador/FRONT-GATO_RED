@@ -28,8 +28,6 @@ useEffect(() => {
 ALlPost()
 },[])
 
-
-
   return (
     <div >
 
