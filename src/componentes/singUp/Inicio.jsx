@@ -39,7 +39,7 @@ const submit= data=>{
 
 return (
     <div className='Login'>
-      <div className='titulo'><h1>Hola Brou CAT</h1></div>
+      <div className='titulo'><h1>Hola me alegra tu visita</h1></div>
       <div>
       
       <form onSubmit={handleSubmit(submit)}>
