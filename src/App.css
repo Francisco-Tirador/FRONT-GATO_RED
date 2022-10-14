@@ -19,6 +19,24 @@
   justify-content: space-around;
   margin: 5px;
 }
+.toggle{
+  background-color: blueviolet;
+  animation: 2s infinite alternate linear toggle;
+}
+
+@keyframes toggle{
+  0%{
+    background-color: chartreuse;
+  }
+  50%{
+    background-color: rgb(0, 81, 255);
+  }
+  100%{
+    background-color: red;
+  }
+}
+
+
 
 body {
 
@@ -30,6 +48,7 @@ body {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .App {
@@ -80,13 +99,28 @@ ul {
 
 .Nav {
   background-color: rgb(40, 40, 40);
-  padding: 25px;
+  padding:25px;
   height: 100vh;
   position: fixed;
   left: 0vh;
   top: 5vh;
-
 }
+.active{
+  padding: 11px 0;
+  background-color: rgb(3, 43, 78);
+  border-radius: 10px;
+  animation: 0.2s 1 linear nav
+}
+
+@keyframes nav{
+  0%{
+    padding: 0%;
+  }
+  100%{
+    padding: 12px 0;
+  }
+}
+
 
 .Nav li {
   margin: 45px 0;
@@ -121,8 +155,67 @@ ul {
 .Login button{
   margin: 5px;
 }
+.animacionConfig{
+  background-color: rgba(6, 6, 6, 0.694);
+  position: fixed;
+  box-sizing:content-box ;
+  width: 250vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.brillo{
+  background-color: rgb(49, 49, 49);
+  box-sizing: content-box;
+  width: 550px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+  border-radius: 25px;
+  border: red inset 10px;
+  border-color: brown;
+  animation: 2s infinite linear alternate borderCuadro;
+}
+.cuadro{
+  background-color: rgba(49, 49, 49, 0);
+  width:430px;
+  height: 430px;
+  border-radius: 25px;
+  animation: 2s 2 linear alternate move;
+}
+@keyframes move{
+ 
+  0%{
+    transform: rotate(30deg);
+  }
+  70%{
+    transform: rotate(-30deg);
+  }
+}
+@keyframes borderCuadro{
+  0%{
+   border-color: rgb(41, 8, 203);
+  }
+  50%{
+    border-color: yellowgreen;
+  }
+  80%{
+    border-color: rgb(225, 0, 255);
+  }
+}
+.cuadro img {
+  width: 50px;
+}
 
-
+.cuadro button{
+  margin:2px;
+}
+.cuadro button:hover{
+  background-color: rgb(127, 165, 199);
+  transform: scale(2);
+}
 /* Formato de los post en su contenedor/////////////////////// */
 .contenidoInicio {
   display: flex;
@@ -228,8 +321,9 @@ ul {
   background-color: rgb(11, 41, 211);
   height: 350px;
   border-radius: 400px 400px 400px 400px;
-
+  animation:2s  1  linear PerfilMove;
 }
+
 
 .iconPerfil {
   width: 300px;
@@ -244,15 +338,18 @@ ul {
   font-weight: bolder;
   font-size: large;
   padding-left:0;
+  animation:2s  1  linear PerfilMove;
 }
-/* .RP{
-  display: flex;
- flex-wrap: nowrap;
- text-align: center;
-  justify-content: center;
-background-color: aliceblue;
-height: 500px;
-} */
+
+@keyframes PerfilMove{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
 .config{
 margin: 20px 0px;
   width: 500px;

@@ -15,35 +15,46 @@ import Myperfil from './componentes/MyPerfil/Myperfil'
 import EditedPerfil from './componentes/MyPerfil/EditedPerfil'
 import ProtectedRoutes from './componentes/ProtectedRoutes'
 import Footer from './componentes/Footer'
+import AnimacionConfig from './componentes/AnimacionConfig'
 
 function App() {
+
 const naviguete=useNavigate()
 const getToken=localStorage.getItem('token')
+const confirmation=localStorage.getItem('config')
 const CloseSession=()=>{
   localStorage.clear('toke')
   localStorage.clear('IdUser')
+  localStorage.clear('Icon')
   naviguete('/')
 }
+const cat=()=>{if(getToken){if(!confirmation){return <AnimacionConfig/>}return null}else{return null}}
 
 //TODO-- Con navLikn podemos dar estilo a la ruta de donde estamos , recibe espesificamente isActive lo llamamos en un callback
   return (
     <div >
     <div className="App">
+     {
+      cat()
+     }
+   
       <div className='head'>
         <h1>GATO RED <img src="https://cdn-icons-png.flaticon.com/512/6855/6855215.png" alt="" /></h1>
       </div>
 
-      
+
       {
         
         getToken?
+        
         <div className='Nav'>
+           
       <ul>
         <li><NavLink className={({isActive})=>isActive?'active':''} to="/"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/871/871821.png"  /> PRINCIPAL</NavLink></li>
-        <li><Link to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </Link></li>
-        <li><Link to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </Link></li>
-        <li><Link to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </Link></li>
-        <li><Link to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </Link></li>
+        <li><NavLink className={({isActive})=>isActive?'active':''} to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </NavLink></li>
+        <li><NavLink className={({isActive})=>isActive?'active':''} to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </NavLink></li>
+        <li><NavLink className={({isActive})=>isActive?'active':''} to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </NavLink></li>
+        <li><NavLink className={({isActive})=>isActive?'active':''} to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </NavLink></li>
         
         <li><button onClick={CloseSession}><img className='icono' src="https://cdn-icons-png.flaticon.com/512/7817/7817037.png" />Salir</button></li>
         

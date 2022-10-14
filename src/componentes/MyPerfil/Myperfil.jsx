@@ -42,7 +42,7 @@ const deletedPerfil=()=>{
     <div  className='contenidoInicio' >
         <div className='contentMyPerfil' style={color1()} >
             <div style={color1(User?.color1)} className='MyperfilConten'>
-                <img className='iconPerfil' src="https://cdn-icons-png.flaticon.com/512/2330/2330063.png" />
+                <img className='iconPerfil' src={User?.imgPerfil?User?.imgPerfil:"https://cdn-icons-png.flaticon.com/512/2330/2330063.png"} />
                 <div className='nameUser' style={color1()}><h1>{User?.name}</h1>
                 <h2>Total de Publicaciones {User?.Pousts.length}</h2>
                 </div>
@@ -50,7 +50,7 @@ const deletedPerfil=()=>{
                 </div>
                 <div className='config'>
                      <button onClick={edited}> <img className='icono' src="https://cdn-icons-png.flaticon.com/512/3730/3730451.png" alt="" /> Editar mi perfil</button>
-                     <button onClick={edited}> <img className='icono' src='https://cdn-icons-png.flaticon.com/512/3807/3807871.png' alt="" /> Eliminar mi perfil</button>
+                     <button onClick={deletedPerfil}> <img className='icono' src='https://cdn-icons-png.flaticon.com/512/3807/3807871.png' alt="" /> Eliminar mi perfil</button>
                 </div>
                 
         </div>
