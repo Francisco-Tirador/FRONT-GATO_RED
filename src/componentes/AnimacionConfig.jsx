@@ -74,7 +74,6 @@ useEffect(() => {
     <div className='animacionConfig'>
         <div className='brillo'>
         <div className='cuadro'>
-            <button onClick={tok}>ds</button>
             <div className='titulo'><h2>Hola quieres cambiar tu icono o colores favoritos el dia de hoy?</h2></div>
             <div>
                 <div>
