@@ -9,6 +9,13 @@
 * {
   list-style: none;
 }
+video{
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .icono {
   width: 25px;
@@ -53,8 +60,8 @@ ul {
 
 .App {
   margin-top: 5%;
-  min-width: 100vh;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 86vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -62,7 +69,7 @@ ul {
 
 .head {
   background-color: black;
-  width: 220vh;
+  width:100vh;
   height: 110px;
   text-align: center;
   position: fixed;
@@ -71,7 +78,7 @@ ul {
 }
 
 .head img {
-  width: 60px;
+  width:60px;
 }
 
 .Footer {
@@ -159,7 +166,7 @@ ul {
   background-color: rgba(6, 6, 6, 0.694);
   position: fixed;
   box-sizing:content-box ;
-  width: 250vh;
+  width: 100vh;
   height: 100vh;
   display: flex;
   justify-content: center;

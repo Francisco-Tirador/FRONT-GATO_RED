@@ -61,6 +61,8 @@ return (
      </div>
     <button  onClick={redireccionRegister}> <img src="https://cdn-icons-png.flaticon.com/512/7817/7817039.png" className='icono' />Crear cuenta nueva</button>
     </div>
+
+    
   )
 }
 

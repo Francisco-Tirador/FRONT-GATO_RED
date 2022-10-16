@@ -34,6 +34,7 @@ const cat=()=>{if(getToken){if(!confirmation){return <AnimacionConfig/>}return n
   return (
     <div >
     <div className="App">
+      
      {
       cat()
      }

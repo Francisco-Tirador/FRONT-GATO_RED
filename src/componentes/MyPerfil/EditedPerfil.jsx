@@ -15,8 +15,8 @@ console.log(User?.color1)
         name:data?.name?data?.name:User?.name,
         emeil:data?.emeil?data?.emeil:User?.emeil,
         age:data?.age?data?.age:User?.age,
-        color1:data?.color1?data?.color1:User?.color1,
-        color2:data?.color2?data?.color2:User?.color2
+        color1:data.color1==="#000000"||undefined?User?.color1:data.color1,
+        color2:data.color2==="#000000"||undefined?User?.color2:data.color2,
     }
     console.log(data2)
     const URL=`https://api-gato-red.onrender.com/api-gato-red/v1/users/My`
