@@ -15,6 +15,14 @@ h5{
   justify-content: space-around;
   margin: 5px;
 }
+body::-webkit-scrollbar{
+  width: 15px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+background-color: rgb(163, 2, 150);
+border-radius: 10px;
+}
 .toggle{
   background-color: blueviolet;
   animation: 2s infinite alternate linear toggle;
@@ -59,7 +67,7 @@ ul {
 
 .head {
   background-color: black;
-  width:100vh;
+  width:100%;
   height: 110px;
   text-align: center;
   position: fixed ;
@@ -76,7 +84,6 @@ ul {
   justify-content: center;
   background-color: rgb(0, 0, 0);
   width: 100%;
-
   text-align: center;
   margin-top: 15px;
   z-index: 100;
@@ -100,8 +107,10 @@ ul {
   padding:25px;
   height: 100vh;
   position: fixed;
+  border-radius: 50px;
   left: 0vh;
   top: 5vh;
+  z-index: 5;
 }
 .active{
   padding: 11px 0;
@@ -138,7 +147,7 @@ ul {
 .Nav2{
   background-color: rgb(40, 40, 40);
   padding:25px;
-  height: 100vh;
+  height: 80vh;
   position: fixed;
   left: 0vh;
   top: 5vh;
@@ -182,15 +191,15 @@ ul {
   background-color: rgba(6, 6, 6, 0.694);
   position: fixed;
   box-sizing:content-box ;
-  width: 100vh;
+  width: 300vh;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
 .brillo{
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(200, 21, 21);
   box-sizing: content-box;
-  width: 550px;
+  width: 100vh;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -241,14 +250,12 @@ ul {
 }
 /* Formato de los post en su contenedor/////////////////////// */
 .contenidoInicio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+ display: inline-block;
 }
 
 .targetPost {
   border-radius: 15px;
-  margin-top: 15px;
+  margin:  15px 100px;
   padding: 20px;
   width: 700px;
   background-color: rgb(45, 45, 45);
@@ -381,30 +388,30 @@ margin: 20px 0px;
   display: inline-flex;
   justify-content: space-around ;
 }
-
+                   /* MENSAJES ---------------- */
 .ContenMensajes{
-
-  width:1000px;
-  margin-left: 17%;
+  
+  width:100%;
+  margin-left: 20%;
 }
 .Mensaje{
   background-color: white;
   color: black;
   padding:25px;
   margin: 20px;
-  width: 1000px;
-  max-width: 800px;
+  width: 60%;
   border-radius: 100px 100px;
 }
 
 .BarraMensaje{
   padding: 10px;
   background-color: rgb(40, 40, 40);
-  width: auto;
+  width: 80%;
   text-align: center;
+  border-radius: 10px;
 }
 .BarraMensaje input{
-background-color: rgb(2, 0, 16);
+background-color: rgb(87, 100, 153);
 width:90%;
 height: 30px;
 }

@@ -49,13 +49,18 @@ const menu=()=>{
         <h1>GATO RED <img src="https://cdn-icons-png.flaticon.com/512/6855/6855215.png" alt="" /></h1>
       </div>
 
-      <div className='menu' onClick={menu}><img  src="https://cdn-icons-png.flaticon.com/512/8367/8367546.png" alt="" /></div>
+      {
+        getToken&&
+        <div className='menu' onClick={menu}><img  src="https://cdn-icons-png.flaticon.com/512/8367/8367546.png" alt="" /></div>
      
+      }
+
       {
         
         getToken?
         
         <div className='Nav'>
+          
          <ul>
         <li><NavLink className={({isActive})=>isActive?'active':''} to="/"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/871/871821.png"  /> PRINCIPAL</NavLink></li>
         <li><NavLink className={({isActive})=>isActive?'active':''} to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </NavLink></li>
@@ -76,14 +81,16 @@ const menu=()=>{
         
         <div className='Nav2'>
          <ul>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/871/871821.png"  /> PRINCIPAL</NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?'active':''} to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </NavLink></li>
+        <li><NavLink onClick={menu} className={({isActive})=>isActive?'active':''} to="/"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/871/871821.png"  /> PRINCIPAL</NavLink></li>
+        <li><NavLink onClick={menu} className={({isActive})=>isActive?'active':''} to="/Myperfil"><img src="https://cdn-icons-png.flaticon.com/512/875/875610.png" className='icono'  /> Ver tu perfil </NavLink></li>
+        <li><NavLink onClick={menu} className={({isActive})=>isActive?'active':''} to="/CreatePost"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/1160/1160758.png" /> Crear Post </NavLink></li>
+        <li><NavLink onClick={menu} className={({isActive})=>isActive?'active':''} to="/RED"><img className='icono' src="https://cdn-icons-png.flaticon.com/512/875/875500.png" /> Conversaciones </NavLink></li>
+        <li><NavLink onClick={menu} className={({isActive})=>isActive?'active':''} to="/Perfiles"><img src="https://cdn-icons-png.flaticon.com/512/875/875541.png" className='icono' /> Agregar Amigo </NavLink></li>
         
-        <li><button onClick={CloseSession}><img className='icono' src="https://cdn-icons-png.flaticon.com/512/7817/7817037.png" />Salir</button></li>
+        <div onClick={menu}>
+        <li ><button onClick={CloseSession} ><img className='icono' src="https://cdn-icons-png.flaticon.com/512/7817/7817037.png" />Salir</button></li>
         
+        </div>
       </ul>
       </div>
       

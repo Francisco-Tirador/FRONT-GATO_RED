@@ -82,7 +82,6 @@ height: 100%;
 display: flex;
 margin-top: 70px;
 justify-content: center;
-text-align: center;
   }
   .head{
     height: 70px;
@@ -140,6 +139,22 @@ text-align: center;
  .nameUser{
   width: 100%;
  }
+ /* edicion y creacion */
+
+ .editedPost {
+  text-align: end;
+  padding: 35px;
+  height: 380px;
+  border-radius: 0 0 100px;
+}
+ .editedImput {
+  width: 180px;
+  height: 10px;
+}
+/* animacion---------- */
+.animacionConfig{
+  width: 100vh;
+}
 }
 
 
