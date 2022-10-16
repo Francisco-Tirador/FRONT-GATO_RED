@@ -72,40 +72,48 @@ button:focus-visible {
 
 
 
-@media (max-width:600px){
+@media (max-width:680px){
   h1{
     font-size: x-large;
 }
   .App{
-background-color: rgb(42, 140, 165);
-
 width: 100%;
-height: 86vh;
+height: 100%;
 display: flex;
+margin-top: 70px;
 justify-content: center;
 text-align: center;
   }
   .head{
     height: 70px;
-    margin-top:9%;
+    top: 0;
   }
    .head img{
 
     width: 30px;
   }
-  /*
-  .Footer{
-    width: 10px;
-  } */
+  .Nav{
+    display: none;
+  }
+  .menu{
+    display: inline-block;
+  }
   .Login{
     margin-top:35%;
-    background-color: #41da00;
     box-sizing: border-box;
     width: 350px;
     height: 400px;
     box-shadow: none;
+    padding: 30px;
   }
-  
+  /* Publicaciones */
+  .targetPost {
+    width: 350px;
+    padding: 0px;
+  }
+  .imgPost{
+    height: 300px;
+  }
  
 }
 

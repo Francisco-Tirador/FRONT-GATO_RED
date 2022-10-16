@@ -7,6 +7,7 @@ import './index.css'
 //? ////////////////////////////////////////
 import { Provider } from 'react-redux' // nos envuelve la app para que los estados de redux puedan ser globales
 import store from './store' //* al no especificar el archivo agarra cuaklquier archivo que sea index
+import Footer from './componentes/Footer'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {//*aqui envolvemos nuestra app con el provider y le pasamos la estore que contiene todos los estados que seran globales
     }<HashRouter>
     <App />
+    <Footer/>
     </HashRouter>
     </Provider>
   </React.StrictMode>

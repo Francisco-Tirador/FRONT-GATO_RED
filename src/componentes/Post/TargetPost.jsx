@@ -43,7 +43,7 @@ const dispach=useDispatch()
 
   return (
     <div className='targetPost'>
-      <div className='contenido'>
+      <div >
           <h3><b>{Post?.user.name}</b> </h3>
          <h4>{Post?.tittle}</h4>
          <div className='textPost'>{
