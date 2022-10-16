@@ -155,6 +155,13 @@ justify-content: center;
 .animacionConfig{
   width: 100vh;
 }
+.cuadro{
+  width: 350px;
+}
+.brillo{
+  width: 40vh;
+  height: 630px;
+}
 }
 
 
