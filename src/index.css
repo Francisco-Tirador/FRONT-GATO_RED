@@ -143,7 +143,7 @@ justify-content: center;
 
  .editedPost {
   text-align: end;
-  padding: 25px;
+  padding: 10px;
   height: 380px;
   border-radius: 0 0 100px;
 }
@@ -151,19 +151,24 @@ justify-content: center;
   width: 180px;
   height: 10px;
 }
+
+}
+
+
+
+@media (max-width:400px){
 /* animacion---------- */
 .animacionConfig{
   width: 100vh;
 }
 .cuadro{
+ 
   width: 350px;
-}
-.brillo{
-  width: 40vh;
-  height: 630px;
-}
+  height: 500px
 }
 
-
-
+.cuadro img {
+  width: 30px;
+}
+}
 
