@@ -17,6 +17,9 @@ video{
   height: 100%;
 }
 
+h5{
+  margin: 5px;
+}
 .icono {
   width: 25px;
   margin-right: 10px;
@@ -82,24 +85,26 @@ ul {
 }
 
 .Footer {
+  display: flex;
+  justify-content: center;
   background-color: rgb(0, 0, 0);
   width: 100%;
   max-height: 100%;
-
+  /* font-weight: ; */
   text-align: center;
   margin-top: 15px;
   z-index: 100;
-  border-radius: 200px 200px 0 0;
+  border-radius:50px 50px 0 0;
 }
 
 .contenFooter {
-  position: relative;
+  background-color: aliceblue;
   z-index: 102;
 }
 
 .Footer img {
   width: 25px;
-  margin: 0 50px;
+  margin: 0 10px;
 }
 
 /* barra de navegacion ////////////////////////////////// */

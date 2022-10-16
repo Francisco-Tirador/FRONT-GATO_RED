@@ -78,19 +78,27 @@ button:focus-visible {
 }
   .App{
 background-color: rgb(42, 140, 165);
+
 width: 100%;
 height: 86vh;
 display: flex;
 justify-content: center;
 text-align: center;
   }
-  /* .head{
-    width: 10px;
+  .head{
+    height: 70px;
+    margin-top:9%;
   }
+   .head img{
+
+    width: 30px;
+  }
+  /*
   .Footer{
     width: 10px;
   } */
   .Login{
+    margin-top:35%;
     background-color: #41da00;
     box-sizing: border-box;
     width: 350px;
@@ -98,9 +106,7 @@ text-align: center;
     box-shadow: none;
   }
   
-  .titulo{
-    background-color: #41da00;
-  }
+ 
 }
 
 
