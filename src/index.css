@@ -72,7 +72,7 @@ button:focus-visible {
 
 
 
-@media (max-width:680px){
+@media (max-width:1000px){
   h1{
     font-size: x-large;
 }
@@ -114,7 +114,32 @@ text-align: center;
   .imgPost{
     height: 300px;
   }
- 
+ /*        MY PERFIL*/
+ .contentMyPerfil{
+  width: 100%;
+ }
+ .MyperfilConten {
+  width: 100%;
+  height: 90%;
+  margin-left: 0%;
+  display: inline-block;
+  border-radius: 20px;
+}
+.BotonesMyperfil{
+  width: 90%;
+  margin: 7px 0px;
+  display: block;
+}
+.BotonesMyperfil button{
+  margin: 1px;
+}
+ .iconPerfil{
+  width: 200px;
+  height: 200px;
+ }
+ .nameUser{
+  width: 100%;
+ }
 }
 
 

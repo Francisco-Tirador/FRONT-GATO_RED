@@ -329,12 +329,14 @@ ul {
 .conversations img {
   width: 30px;
 }
-
+/* 
+//////////////MY PERFIL//////////////////// */
 .contentMyPerfil{
   text-align: center;
-  width: 900px;
+  width: 65%;
   height:400px ;
   margin-bottom: 40px;
+  margin-bottom: 75px;
 }
 
 .MyperfilConten {
@@ -373,7 +375,7 @@ ul {
   }
 }
 
-.config{
+.BotonesMyperfil{
 margin: 20px 0px;
   width: 500px;
   display: inline-flex;

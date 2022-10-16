@@ -48,7 +48,7 @@ const deletedPerfil=()=>{
                 </div>
                
                 </div>
-                <div className='config'>
+                <div className='BotonesMyperfil'>
                      <button onClick={edited}> <img className='icono' src="https://cdn-icons-png.flaticon.com/512/3730/3730451.png" alt="" /> Editar mi perfil</button>
                      <button onClick={deletedPerfil}> <img className='icono' src='https://cdn-icons-png.flaticon.com/512/3807/3807871.png' alt="" /> Eliminar mi perfil</button>
                 </div>
